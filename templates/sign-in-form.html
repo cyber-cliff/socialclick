@@ -1,0 +1,28 @@
+<div style="position:absolute;top:10%;width:100%;z-index:99999" id="signinbox">
+  <div class="login">
+    <h2>Login</h2>
+    <div id="login_error_msg">error here</div>
+    <div class="loginform">
+      <div id="signinclose">Close</div>
+      <form method="post" action="" id="form_signin">
+        <div class="input"> <span>Username or Email</span>
+          <input name="username" type="text" id="username" />
+        </div>
+        <div class="input"> <span>Password</span>
+          <input name="password" type="password" id="password" />
+        </div>
+        <div class="keeploggedin">
+        	<input type="checkbox" name="keeploggedin" id="keeploggedin" checked="checked" value="1" /><span onclick="checkkeeploggedin()">Keep me logged in</span>
+        </div>
+        <div class="submit">
+          <input name="login" class="sylverbutton" type="submit" value="Login" id="loginbutton" />
+        </div>
+      </form>
+      <div style="text-align:center;margin:8px 2px;">
+      	<span style="margin:0 auto;padding:5px;border:#888 solid 1px;background-color:#EEE">
+        	Don't have an account yet? <a href="register.html">Create now</a> 
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

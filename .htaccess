@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^([^/]*)\.html$ ./index.php?p=$1 [L]
+RewriteRule ^s/([^/]*)$ ./s.php?c=$1 [L]
+RewriteRule ^(\w+)$ ./s.php?c=$1
+
+RewriteRule (.*)\+ details.php?s_c=$1
+RewriteRule details/s_c/(.*)/ details.php?s_c=$1
+RewriteRule details/s_c/(.*) details.php?s_c=$1
+
+ErrorDocument 404 /templates/error404.php
